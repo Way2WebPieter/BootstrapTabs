@@ -2,10 +2,11 @@
  *  Extens the bootstrap tabs.
  *
  * @param {object} element
+ * @param {string} prefix
  *
  * @return {object}
  */
-var BootstrapTabs = (function(element) {
+var BootstrapTabs = (function(element, prefix) {
     'use strict';
 
     var globals = {
@@ -112,6 +113,10 @@ var BootstrapTabs = (function(element) {
 
             if (!globals.id) {
                 globals.id = element.parent().attr('id');
+            }
+
+            if(prefix) {
+                globals.prefix = prefix;
             }
         }
     };
