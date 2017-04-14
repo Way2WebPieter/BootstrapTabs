@@ -61,11 +61,11 @@ var BootstrapTabs = (function(element) {
             var tabs = [];
             var errorElements;
 
-            if (errorElements.parent().find(elements.error).length < 1) {
+            if (element.parent().find(elements.error).length < 1) {
                 return tabs;
             }
 
-            errorElements = errorElements.parent().find(elements.error).closest(elements.tabPage);
+            errorElements = element.parent().find(elements.error).closest(elements.tabPage);
             errorElements.each(function() {
                 tabs.push($(this).attr('id'));
             });
